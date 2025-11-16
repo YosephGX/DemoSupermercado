@@ -1,0 +1,373 @@
+{
+	"info": {
+		"_postman_id": "e142e76b-a939-40f2-8c07-21e0685fd98f",
+		"name": "DemoSuperMercado",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "44577757",
+		"_collection_link": "https://waldervelasquez.postman.co/workspace/Walder-Velasquez's-Workspace~987906bb-e19e-411b-899a-88415ef2e3ad/collection/44577757-e142e76b-a939-40f2-8c07-21e0685fd98f?action=share&source=collection_link&creator=44577757"
+	},
+	"item": [
+		{
+			"name": "Estadisticas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{urlBase}}{{urlEstadisticas}}"
+			},
+			"response": [
+				{
+					"name": "TopProducts",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": "{{urlBase}}{{urlEstadisticas}}/product/top"
+					},
+					"_postman_previewlanguage": "",
+					"header": [],
+					"cookie": [
+						{
+							"expires": "Invalid Date",
+							"domain": "",
+							"path": ""
+						}
+					],
+					"body": ""
+				},
+				{
+					"name": "TopBranches",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": "{{urlBase}}{{urlEstadisticas}}/branch/top"
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Productos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{urlBase}}{{urlProductos}}"
+			},
+			"response": [
+				{
+					"name": "POST",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Coca Cola 1.5L\",\n    \"category\": \"Bebidas\",\n    \"price\": 15.0,\n    \"quantity\": 100\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{urlBase}}{{urlProductos}}"
+					},
+					"_postman_previewlanguage": "",
+					"header": [],
+					"cookie": [
+						{
+							"expires": "Invalid Date",
+							"domain": "",
+							"path": ""
+						}
+					],
+					"body": ""
+				},
+				{
+					"name": "PUT",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"quantity\": 50\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{urlBase}}{{urlProductos}}/2"
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "DELETE",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{urlBase}}{{urlProductos}}/3",
+							"host": [
+								"{{urlBase}}{{urlProductos}}"
+							],
+							"path": [
+								"3"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Sucursales",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{urlBase}}{{urlSucursales}}"
+			},
+			"response": [
+				{
+					"name": "POST",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"PTB\",\n    \"address\": \"Puerto barrios, Izabal\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{urlBase}}{{urlSucursales}}"
+					},
+					"_postman_previewlanguage": "",
+					"header": [],
+					"cookie": [
+						{
+							"expires": "Invalid Date",
+							"domain": "",
+							"path": ""
+						}
+					],
+					"body": ""
+				},
+				{
+					"name": "PUT",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"address\": \"Santo tomas de castilla, puerto barrios, Izabal\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{urlBase}}{{urlSucursales}}/2"
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "DELETE",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{urlBase}}{{urlSucursales}}/4"
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Ventas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{urlBase}}{{urlVentas}}"
+			},
+			"response": [
+				{
+					"name": "POST",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"date\": \"2025-11-15\",\n    \"status\": \"REGISTRADA\",\n    \"idBranch\": 1,\n    \"detail\": [\n        {\n            \"id\": 1,\n            \"nameProd\": \"Coca Cola 1.5L\",\n            \"cantProd\": 2,\n            \"price\": 15.0,\n            \"subTotal\": 30.0\n        },\n        {\n            \"id\": 2,\n            \"nameProd\": \"Coca Cola 2.5L\",\n            \"cantProd\": 2,\n            \"price\": 25.0,\n            \"subTotal\": 50.0\n        }\n    ],\n    \"total\": 80.0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{urlBase}}{{urlVentas}}"
+					},
+					"_postman_previewlanguage": "",
+					"header": [],
+					"cookie": [
+						{
+							"expires": "Invalid Date",
+							"domain": "",
+							"path": ""
+						}
+					],
+					"body": ""
+				},
+				{
+					"name": "PUT",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"date\": \"2025-11-15\",\n    \"status\": \"ANULADA\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{urlBase}}{{urlVentas}}/3"
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "DELETE",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{urlBase}}{{urlVentas}}/3"
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "urlBase",
+			"value": "http://localhost:8080",
+			"type": "default"
+		},
+		{
+			"key": "urlProductos",
+			"value": "/api/products",
+			"type": "string"
+		},
+		{
+			"key": "urlSucursales",
+			"value": "/api/branches",
+			"type": "string"
+		},
+		{
+			"key": "urlVentas",
+			"value": "/api/sales",
+			"type": "string"
+		},
+		{
+			"key": "urlEstadisticas",
+			"value": "/api/stats",
+			"type": "string"
+		}
+	]
+}
